@@ -1,7 +1,8 @@
 import { toast } from "react-toastify";
 import axios from "axios";
 export const register = async (user) => {
-  const URL = `/api/users`;
+  const URL = `https://support-desk-back.onrender.com`;
+  // api/users
   try {
     const res = await axios.post(URL, user);
     if (res.data) {
@@ -14,7 +15,8 @@ export const register = async (user) => {
 };
 
 export const login = async (user) => {
-  const URL = `/api/users/login`;
+  const URL = `https://support-desk-back.onrender.com`;
+  // /api/users/login
   try {
     const res = await axios.post(URL, user);
     if (res.data) {
