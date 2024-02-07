@@ -2,7 +2,7 @@ import axios from "axios";
 
 const createTicket = async (ticketData, userToken) => {
   // const URL = "/api/tickets/create-ticket";
-  const URL = "https://support-desk-back.onrender.com"
+  const URL = "https://support-desk-back.onrender.com/api/tickets/create-ticket"
   try {
     const res = await axios.post(URL, ticketData, {
       headers: { Authorization: `Bearer ${userToken}` },
@@ -15,7 +15,7 @@ const createTicket = async (ticketData, userToken) => {
 };
 const viewTickets = async (userToken) => {
   // const URL = "/api/tickets/view-tickets";
-  const URL = "https://support-desk-back.onrender.com"
+  const URL = "https://support-desk-back.onrender.com/api/tickets/view-tickets"
 
   try {
     const res = await axios.get(URL, {
@@ -30,7 +30,7 @@ const viewTickets = async (userToken) => {
 
 const getTicket = async (ticketId, userToken) => {
   // const URL = `/api/tickets/view-tickets/${ticketId}`;
-  const URL = "https://support-desk-back.onrender.com"
+  const URL = "https://support-desk-back.onrender.com/api/tickets/view-tickets/${ticketId}"
 
   try {
     const res = await axios.get(URL, {
@@ -44,7 +44,7 @@ const getTicket = async (ticketId, userToken) => {
 };
 const closeTicket = async (ticketId, userToken) => {
   // const URL = `/api/tickets/view-tickets/${ticketId}`;
-  const URL = "https://support-desk-back.onrender.com"
+  const URL = "https://support-desk-back.onrender.com/api/tickets/view-tickets/${ticketId}"
 
 
   try {
